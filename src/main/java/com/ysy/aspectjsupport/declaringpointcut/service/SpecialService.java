@@ -1,10 +1,13 @@
 package com.ysy.aspectjsupport.declaringpointcut.service;
 
+import org.springframework.stereotype.Component;
+
 import com.ysy.aspectjsupport.declaringpointcut.annotation.Loggable;
 import com.ysy.aspectjsupport.declaringpointcut.annotation.SpecialComponent;
 import com.ysy.aspectjsupport.declaringpointcut.annotation.Validated;
 
 @SpecialComponent
+@Component
 public class SpecialService {
 	
     @Loggable

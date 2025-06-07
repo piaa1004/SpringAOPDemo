@@ -1,4 +1,4 @@
-package com.ysy.aspectjsupport.combindedpointcuts.dao;
+package com.ysy.aspectjsupport.combindedpointcuts.service.dao;
 
 import org.springframework.stereotype.Repository;
 

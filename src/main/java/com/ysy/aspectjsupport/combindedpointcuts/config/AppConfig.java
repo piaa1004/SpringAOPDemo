@@ -10,7 +10,7 @@ import com.ysy.aspectjsupport.combindedpointcuts.pointcuts.CommonPointcuts;
 
 @Configuration
 @EnableAspectJAutoProxy
-@ComponentScan(basePackages = "com.ysy.aspectj.combindedpointcuts")
+@ComponentScan(basePackages = "com.ysy.aspectjsupport.combindedpointcuts")
 public class AppConfig {
 
 //    @Bean

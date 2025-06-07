@@ -5,7 +5,7 @@ import org.springframework.context.ApplicationContext;
 import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 
 import com.ysy.aspectjsupport.combindedpointcuts.config.AppConfig;
-import com.ysy.aspectjsupport.combindedpointcuts.dao.MyDao;
+import com.ysy.aspectjsupport.combindedpointcuts.service.dao.MyDao;
 import com.ysy.aspectjsupport.combindedpointcuts.service.MyService;
 import com.ysy.aspectjsupport.combindedpointcuts.web.WebController;
 

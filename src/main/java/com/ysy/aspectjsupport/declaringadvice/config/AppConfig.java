@@ -14,7 +14,7 @@ import com.ysy.aspectjsupport.declaringadvice.service.Sample;
 import com.ysy.aspectjsupport.declaringadvice.service.SampleService;
 
 @Configuration
-@ComponentScan(basePackages = "com.ysy.aspectj.declaringadvice")
+@ComponentScan(basePackages = "com.ysy.aspectjsupport.declaringadvice")
 @EnableAspectJAutoProxy(proxyTargetClass = true)
 public class AppConfig {
 		

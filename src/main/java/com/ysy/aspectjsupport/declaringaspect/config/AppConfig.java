@@ -10,13 +10,13 @@ import com.ysy.aspectjsupport.declaringaspect.service.MyService;
 
 @Configuration
 @EnableAspectJAutoProxy
-@ComponentScan(basePackages = "com.ysy.aspectj.declaringaspect")
+@ComponentScan(basePackages = "com.ysy.aspectjsupport.declaringaspect")
 public class AppConfig {
 
-    @Bean
-    public NotVeryUsefulAspect notVeryUsefulAspect() {
-        return new NotVeryUsefulAspect();
-    }
+//    @Bean
+//    public NotVeryUsefulAspect notVeryUsefulAspect() {
+//        return new NotVeryUsefulAspect();
+//    }
 
     @Bean
     public MyService myService() {
