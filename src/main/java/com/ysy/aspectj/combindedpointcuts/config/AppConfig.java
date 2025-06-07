@@ -1,0 +1,25 @@
+package com.ysy.aspectj.combindedpointcuts.config;
+
+import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
+import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.EnableAspectJAutoProxy;
+
+import com.ysy.aspectj.combindedpointcuts.aspect.LoggingAspect;
+import com.ysy.aspectj.combindedpointcuts.pointcuts.CommonPointcuts;
+
+@Configuration
+@EnableAspectJAutoProxy
+@ComponentScan(basePackages = "com.ysy.aspectj.combindedpointcuts")
+public class AppConfig {
+
+//    @Bean
+//    public CommonPointcuts commonPointcuts() {
+//        return new CommonPointcuts();
+//    }
+
+    @Bean
+    public LoggingAspect loggingAspect() {
+        return new LoggingAspect();
+    }
+}
