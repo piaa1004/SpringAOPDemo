@@ -10,9 +10,10 @@ import org.springframework.stereotype.Component;
 @Component
 public class AccountAspect {
 
+	// inline pointcut을 사용함
     @Around("execution(java.util.List<com.ysy.aspectjsupport.declaringadvice.model.Account> " +
             "com.ysy.aspectjsupport.declaringadvice.service.AccountService.find*(..)) && " +
-            "com.ysy.aspectjsupport.declaringadvice.aspect.CommonPointcuts.inDataAccessLayer() && " +
+            //"com.ysy.aspectjsupport.declaringadvice.aspect.CommonPointcuts.inDataAccessLayer() && " +
             "args(accountHolderNamePattern)")
     public Object preProcessQueryPattern(ProceedingJoinPoint pjp, String accountHolderNamePattern) throws Throwable {
         System.out.println("AccountAspect:preProcessQueryPattern:Calss: " + pjp.getTarget().getClass().getName());
