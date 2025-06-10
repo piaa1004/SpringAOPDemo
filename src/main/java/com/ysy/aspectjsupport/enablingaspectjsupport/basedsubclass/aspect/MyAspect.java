@@ -7,7 +7,8 @@ import org.aspectj.lang.annotation.Before;
 public class MyAspect {
 
     @Before("execution(* com.ysy.aspectjsupport.enablingaspectjsupport.basedsubclass.service.FooService+.*(..))")
-    public void advice() {
+    //@Before(anyOldTransfer)
+	public void advice() {
         System.out.println("MyAspect advice");
     }
 }
