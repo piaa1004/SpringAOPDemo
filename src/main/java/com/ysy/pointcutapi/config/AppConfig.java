@@ -15,6 +15,8 @@ import org.springframework.context.annotation.Lazy;
 import com.ysy.pointcutapi.advice.ExceptionHandlingAdvice;
 import com.ysy.pointcutapi.advice.ExecutionTimeAdvice;
 import com.ysy.pointcutapi.advice.LoggingAdvice;
+import com.ysy.pointcutapi.pointcut.CustomPointcut;
+import com.ysy.pointcutapi.pointcut.MyPointcutAdvisor;
 import com.ysy.pointcutapi.service.AnotherService;
 import com.ysy.pointcutapi.service.MyService;
 
@@ -32,6 +34,8 @@ public class AppConfig {
         pointcut.setExpression("execution(* com.ysy.pointcutapi.service.MyService.myMethod(..))");
         return pointcut;
     }
+    
+    
 
     // @Qualifier 어노테이션은 auto-wire 시 후보 빈에 대한 한정자로 필드나 파라미터에 사용될 수 있습니다. 
     // 또한 다른 사용자 정의 어노테이션에 어노테이션을 달고, 그런 다음 한정자로 사용할 수 있습니다.
@@ -86,6 +90,11 @@ public class AppConfig {
         proxyFactoryBean.setTarget(anotherService);
         proxyFactoryBean.setInterceptorNames("loggingAdvisor", "executionTimeAdvisor", "exceptionHandlingAdvisor");
         return proxyFactoryBean;
+    }
+    
+    @Bean
+    public MyPointcutAdvisor retryAdvisor() {
+        return new MyPointcutAdvisor();
     }
 
     @Bean
